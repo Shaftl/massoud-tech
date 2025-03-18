@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContainer {
+  max-width: 100rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.iphoneSpline {
+  position: absolute;
+  top: 5rem;
+  left: 20rem;
+  z-index: 100;
+}
+
+.heroBox {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.heroText {
+  position: relative;
+  z-index: 10;
+  margin-top: 5rem;
+}
+
+.heroText h1 {
+  font-size: 7rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 2.8rem;
+  max-width: 50rem;
+}
+
+.heroText p {
+  font-size: 1.6rem;
+  max-width: 48rem;
+  line-height: 1.6;
+  color: #cfd9db;
+  margin-bottom: 2.6rem;
+}
+
+.heroText button {
+  font-size: 1.6rem;
+  padding: 1.4rem 3rem;
+  background-color: #2be82a;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  border-radius: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.aboutPhone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  transform: translate(-50%, -50%);
+  gap: 3rem;
+  z-index: 101;
+}
+
+.aboutCard {
+  background-color: #cfd9db;
+
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  color: #202020;
+}
+
+.aboutCard:hover .layer {
+  opacity: 1;
+  visibility: visible;
+  left: -12rem;
+}
+
+.phoneImgIphon {
+  display: none;
+}
+
+.layer {
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -10rem;
+  background-color: #cfd9dbb6;
+  width: 10rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1.4rem;
+  gap: 2px;
+  font-family: "Space Grotesk" !important;
+}
+
+.layer h4 {
+  font-size: 1.4rem;
+}
+
+.layer p {
+  font-size: 1rem;
+}
+
+.phoneImg {
+  height: 50rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 100;
+}
+
+.pagination button {
+  background: #111;
+  width: 4rem;
+  height: 4rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  background: #333;
+}
+
+.pagination button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    padding: 0 6rem;
+  }
+  .heroText h1 {
+    font-size: 6rem;
+    max-width: 40rem;
+  }
+
+  .heroText p {
+    font-size: 1.4rem;
+    max-width: 48rem;
+  }
+
+  .heroText button {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 910px) {
+  .spline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .responsiveSpline {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+
+  .phoneImgIphon {
+    display: inline-block;
+    height: 40rem;
+  }
+
+  .hero {
+    height: auto;
+    gap: 3rem;
+    padding: 6rem 0rem;
+  }
+  .heroBox {
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .heroText h1 {
+    margin: 0 auto;
+    margin-bottom: 2.8rem;
+  }
+
+  .heroText p {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2.6rem;
+  }
+
+  .heroText button {
+    margin: 0 auto;
+  }
+
+  .aboutPhone {
+    right: 4rem;
+  }
+
+  .pagination {
+    left: 50%;
+    bottom: -5rem;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 8rem 3rem;
+  }
+  .heroText h1 {
+    font-size: 4rem;
+    max-width: 40rem;
+  }
+}

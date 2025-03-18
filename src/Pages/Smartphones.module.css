@@ -1,0 +1,215 @@
+.smartPhones {
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.smartPhonesContainer {
+  max-width: 100rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.smartPhonesBox {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 5rem;
+}
+
+.heading {
+  margin-bottom: 3rem;
+}
+
+.heading h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  /* max-width: 50rem; */
+
+  margin-bottom: 5rem;
+}
+
+.options button {
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.3s;
+  border: 1px solid #aaa;
+}
+
+.options button:hover {
+  background-color: #2be82a !important;
+  color: #202020 !important;
+  border: 1px solid #2be82a !important;
+}
+
+.optionsActive {
+  background-color: #2be82a !important;
+  color: #202020 !important;
+  border: 1px solid #2be82a !important;
+  font-weight: bold;
+}
+
+.phonesBox {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.phonesCard {
+  width: 100%;
+  height: 30rem;
+  border-radius: 6rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.phonesBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phonesCard:hover .layer {
+  opacity: 1;
+  visibility: visible;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000000d2;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 3rem;
+  padding: 1rem;
+  transition: all 0.3s;
+}
+
+.layer a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.layer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  /* gap: 1rem; */
+  font-family: "Space Grotesk", "Quicksand";
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.info h4 {
+  font-size: 1.4rem;
+}
+
+.info p {
+  margin-top: 0rem;
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.price {
+  position: absolute;
+  top: 1rem;
+  left: -6rem;
+  background-color: #2ae82ab6;
+  color: #000000;
+  font-size: 1.8rem;
+  width: 20rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transform: rotate(-45deg);
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 1100px) {
+  .smartPhones {
+    padding: 0 6rem;
+  }
+
+  .phonesBox {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 3rem;
+  }
+  .smartPhones h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .options {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .smartPhones {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .phonesBox {
+    /* padding: 0 4rem; */
+  }
+  .phonesBox {
+    grid-template-columns: 1fr !important;
+  }
+  .smartPhones h3 {
+    font-size: 2.6rem;
+  }
+
+  .options {
+    font-size: 1.2rem;
+  }
+
+  .phonesCard {
+    height: 50rem;
+    overflow: hidden;
+  }
+}
